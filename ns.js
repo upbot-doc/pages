@@ -1,11 +1,11 @@
 module.exports = {
     cname: {
-        //"rundocs.io": "rundocs.github.io",
+        "bot-docs.io": "bot-docs.github.io",
         /* start */
-        //"jekyll-theme-docsify": "rundocs.github.io",
-        //"jekyll-rtd-theme": "rundocs.github.io",
+        "jekyll-theme-docsify": "bot-docs.github.io",
+        "jekyll-rtd-theme": "bot-docs.github.io",
     },
     txt: {
-        //"rundocs.io": "google-site-verification=X-KVlK1E2ZRkqgO3UzHYn4Fm26gUlZY132HREO4lkmM",
+        "bot-docs.io": "google-site-verification=X-KVlK1E2ZRkqgO3UzHYn4Fm26gUlZY132HREO4lkmM",
     }
 }
