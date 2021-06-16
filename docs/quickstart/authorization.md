@@ -18,7 +18,7 @@ sort: 1
 
 如下为机器人的鉴权示例:
 
-```tip
+```
 Authorization: 202cb962ac59075b964b07152d234b70
 ```
 
