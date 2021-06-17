@@ -6,7 +6,8 @@ remote_theme: rundocs/jekyll-rtd-theme
 
 readme_index:
   with_frontmatter: true
-
+edit_on_github: false
+github_docs_folder: false
 exclude:
   - Makefile
   - CNAME
