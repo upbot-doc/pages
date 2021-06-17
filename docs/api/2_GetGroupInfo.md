@@ -39,7 +39,7 @@ sort: 2
 | ├─ name       | string  | 非必须  |     | 群组名称   |           |
 | ├─ profile    | string  | 非必须  |     | 简介     |           |
 | ├─ def_cid    | string  | 非必须  |     | 默认频道ID |           |
-| ├─ creator_id | string  | 非必须  |     | 创建用户ID |           |
+| ├─ creator_id | string  | 非必须  |     | 群组创建者ID |           |
 | ├─ create_uts | string  | 非必须  |     | 创建时间戳秒  |           |
 | ├─ status     | integer | 非必须  | 1   | 状态     | 1 有效 2 删除 |
 | ├─ deleter_id | string  | 非必须  | "0" | 删除者ID |           |
