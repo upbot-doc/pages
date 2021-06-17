@@ -33,7 +33,12 @@
             {{- created_time }}-{{ updated_time -}},
         {%- endif -%}
     </span>
-    {{- author -}}
+    <a class="text-gray">
+        {{- author -}}
+    </a>
     {{ __.revision | default: "Revision" }}
-    {{- docs.build_revision | slice: 0, 7 -}}
+    <a class="text-gray">
+        {{- docs.build_revision | slice: 0, 7 -}}
+    </a>
+
 </div>
