@@ -4,7 +4,7 @@ sort: 2
 
 # 开发入门
 
-## 配置回调地址
+## 回调地址
 
 为了能够接收推送消息，首先你必须在开发者后台配置回调地址。
 
@@ -28,3 +28,24 @@ Authorization: 202cb962ac59075b964b07152d234b70
 
 在消息中，我们会带上 `verify_token`, 你可以检查 `verify_token` 是否与开发者后台的 `verify_token` 是否 相同以确保这个事件的来源确实是 Bot开放平台，而不是恶意的第三方伪造的事件。
 
+## 配置页合法性
+
+在打开配置页时，url地址会携带 `sig` 字段。
+
+开发者可以使用 `sig` 来校验配置页请求的合法性。
+
+`sig` 采用 `JWT` 规范，签名算法为 `HS256`，使用 `token` 做为生成和校验签名的密钥。
+
+playload数据主要包括：
+
+- gid : 群组编号
+- bot_id : Bot编号
+- uid : 用户编号
+- iat : 签发时间戳
+- exp : 有效期（单位秒）
+
+生成签名示例：
+```
+eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJnaWQiOjEwMTIzLCJib3RfaWQiOjEwMDAwOTQzNywidWlkIjoxMDAwMDQyNDUsImV4cCI6NzIwMCwiaWF0IjoxNjIzO
+TAwNjM0fQ.e3ZrBhQW7zaii-45osUtSGDfQp-85Vma7sZdn2P4HTo
+```
