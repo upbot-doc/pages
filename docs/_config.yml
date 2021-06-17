@@ -2,6 +2,8 @@ title: Bot开发者中心
 lang: en
 description: Bot开发文档
 
+remote_theme: rundocs/jekyll-rtd-theme
+
 readme_index:
   with_frontmatter: true
 edit_on_github: false
