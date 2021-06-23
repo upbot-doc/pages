@@ -115,11 +115,11 @@ sort: 1
 	"l2_type": 2,
 	"body": {
 		"video_info": [{
-			"video_url": "video.mp4",
+			"video_url": "https://www.example.com/video.mp4",
 			"video_size": 54100,
 			"video_second": 36,
 			"video_format": "mp4",
-			"thumb_url": "https://ossweb-img.qq.com/upload/webplat/info/yxzj/20210601/858841263954048.jpg",
+			"thumb_url": "https://www.example.com/image.jpg",
 			"thumb_width": 80,
 			"thumb_height": 60,
 			"thumb_format": "JPG",
@@ -130,7 +130,7 @@ sort: 1
 			"video_size": 54100,
 			"video_second": 36,
 			"video_format": "mp4",
-			"thumb_url": "https://ossweb-img.qq.com/upload/webplat/info/yxzj/20210601/858841263954048.jpg",
+			"thumb_url": "https://www.example.com/image.jpg",
 			"thumb_width": 80,
 			"thumb_height": 60,
 			"thumb_format": "JPG",
@@ -166,7 +166,7 @@ sort: 1
 				"uuid": "abc3788c-cf7c-447c-baae-30f38249ccc5",
 				"image_format": 1,
 				"image_info_array": [{
-					"url": "https://ossweb-img.qq.com/upload/webplat/info/yxzj/20210601/858841263954048.jpg",
+					"url": "https://www.example.com/image.jpg",
 					"type": 1,
 					"size": 4301,
 					"width": 400,
@@ -178,7 +178,7 @@ sort: 1
 				"uuid": "abc3788c-cf7c-447c-baae-30f38249ccc5",
 				"image_format": 1,
 				"image_info_array": [{
-					"url": "https://ossweb-img.qq.com/upload/webplat/info/yxzj/20210601/858841263954048.jpg",
+					"url": "https://www.example.com/image.jpg",
 					"type": 2,
 					"size": 4301,
 					"width": 400,
@@ -329,8 +329,8 @@ sort: 1
 	"body": {
 		"card_info": [
 			{
-				"link": "https://ossweb-img.qq.com/upload/webplat/info/yxzj/20210601/858841263954048.jpg",
-				"thumbnail": "https://ossweb-img.qq.com/upload/webplat/info/yxzj/20210601/858841263954048.jpg",
+				"link": "https://www.example.com/image.jpg",
+				"thumbnail": "https://www.example.com/image.jpg",
 				"title":"标题",
 				"source":"来源",
 				"ext":[
@@ -338,8 +338,8 @@ sort: 1
 				]
 			},
 			{
-				"link": "https://ossweb-img.qq.com/upload/webplat/info/yxzj/20210601/858841263954048.jpg",
-				"thumbnail": "https://ossweb-img.qq.com/upload/webplat/info/yxzj/20210601/858841263954048.jpg",
+				"link": "https://www.example.com/image.jpg",
+				"thumbnail": "https://www.example.com/image.jpg",
 				"title":"标题",
 				"source":"来源",
 				"ext":[
@@ -407,7 +407,7 @@ sort: 1
 			"uuid": "abc3788c-cf7c-447c-baae-30f38249ccc5",
 			"image_format": 1,
 			"image_info_array": [{
-				"url": "https://ossweb-img.qq.com/upload/webplat/info/yxzj/20210601/858841263954048.jpg",
+				"url": "https://www.example.com/image.jpg",
 				"type": 2,
 				"size": 4301,
 				"width": 400,
@@ -588,7 +588,7 @@ sort: 1
 			"type": 2,
 			"displayName": "外站跳转 ",
 			"website_ext": {
-				"url": "https://www.qq.com/"
+				"url": "https://www.example.com/"
 			}
 		}]
 	}
