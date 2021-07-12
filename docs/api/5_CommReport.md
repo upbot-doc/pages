@@ -24,27 +24,27 @@ sort: 5
 
 **Body**
 
-| 名称           | 类型        | 是否必须 | 默认值 | 备注                             | 其他信息                       |   |
-|--------------|-----------|------|-----|--------------------------------|----------------------------|---|
-| ts           | integer   | 必须   |     | 时间戳                            |                            |   |
-| nonce        | string    | 必须   |     | 随机字符串                          |                            |   |
-| data_list    | object [] | 必须   |     | 上报数据内容                         | [{},{}]                    |   |
-| ├─ oper_id   | integer   | 必须   |     | 操作ID                           | 操作ID官方提供                   |   |
-| ├─ gid       | integer   | 非必须  |     | 群组ID                           |                            |   |
-| ├─ target_id | string    | 非必须  |     | 频道ID                           |                            |   |
-| ├─ to_uid    | object    | 非必须  |     | 接收者uid                         | 群聊为at_msg中uid，私聊为target_id |   |
-| ├─ scope     | string    | 非必须  |     | 消息范围 channel:频道消息,private:私聊信息 | 默认channel                  |   |
-| ├─ ext1      | string    | 非必须  |     | 扩展字段1                          |                            |   |
-| ├─ ext2      | string    | 非必须  |     | 扩展字段2                          |                            |   |
-| ├─ ext3      | string    | 非必须  |     | 扩展字段3                          |                            |   |
-| ├─ ext4      | string    | 非必须  |     | 扩展字段4                          |                            |   |
-| ├─ ext5      | string    | 非必须  |     | 扩展字段5                          |                            |   |
-| ├─ ext6      | string    | 非必须  |     | 扩展字段6                          |                            |   |
-| ├─ ext7      | string    | 非必须  |     | 扩展字段7                          |                            |   |
-| ├─ ext8      | string    | 非必须  |     | 扩展字段8                          |                            |   |
-| ├─ ext9      | string    | 非必须  |     | 扩展字段9                          |                            |   |
-| ├─ ext10     | string    | 非必须  |     | 扩展字段10                         |                            |   |
-                                |                                    |
+| 名称           | 类型        | 是否必须 | 默认值 | 备注                             | 其他信息                       |
+|--------------|-----------|------|-----|--------------------------------|----------------------------|
+| ts           | integer   | 必须   |     | 时间戳                            |                            |
+| nonce        | string    | 必须   |     | 随机字符串                          |                            |
+| data_list    | object [] | 必须   |     | 上报数据内容                         | [{},{}]                    |
+| ├─ oper_id   | integer   | 必须   |     | 操作ID                           | 操作ID官方提供                   |
+| ├─ gid       | integer   | 非必须  |     | 群组ID                           |                            |
+| ├─ target_id | string    | 非必须  |     | 频道ID                           |                            |
+| ├─ to_uid    | object    | 非必须  |     | 接收者uid                         | 群聊为at_msg中uid，私聊为target_id |
+| ├─ scope     | string    | 非必须  |     | 消息范围 channel:频道消息,private:私聊信息 | 默认channel                  |
+| ├─ ext1      | string    | 非必须  |     | 扩展字段1                          |                            |
+| ├─ ext2      | string    | 非必须  |     | 扩展字段2                          |                            |
+| ├─ ext3      | string    | 非必须  |     | 扩展字段3                          |                            |
+| ├─ ext4      | string    | 非必须  |     | 扩展字段4                          |                            |
+| ├─ ext5      | string    | 非必须  |     | 扩展字段5                          |                            |
+| ├─ ext6      | string    | 非必须  |     | 扩展字段6                          |                            |
+| ├─ ext7      | string    | 非必须  |     | 扩展字段7                          |                            |
+| ├─ ext8      | string    | 非必须  |     | 扩展字段8                          |                            |
+| ├─ ext9      | string    | 非必须  |     | 扩展字段9                          |                            |
+| ├─ ext10     | string    | 非必须  |     | 扩展字段10                         |                            |
+
 
 ## 返回数据
 
