@@ -27,6 +27,7 @@ sort: 1
 | ------------                                             | ---------- | -------- | :----------------------------------------------------------- |
 | signal                                                   | integer    | 必须     | 消息类型,1:消息 ,2:心跳;3:加群;4:退群                        |
 | verify_token                                             | string     | 必须     | 验证token(判断消息合法性)                                   |
+| heartbeat                                                | string     | 非必须     | 消息类型为2时，需原样返回                                  |
 | group_info                                               | object     | 非必须   | 加群退群信息(可做加群初始化逻辑)                             |
 | data                                                     | object[]   | 非必须   | 消息数据                                                     | 
 | &nbsp;&nbsp;&nbsp;├ type                                 | string     | 非必须   | 消息类型 common:普通消息 ,control控制消息                    |
