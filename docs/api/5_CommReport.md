@@ -29,10 +29,10 @@ sort: 5
 | ts           | integer   | 必须   |     | 时间戳                            |                            |
 | nonce        | string    | 必须   |     | 随机字符串                          |                            |
 | data_list    | object [] | 必须   |     | 上报数据内容,每次请求最多10条        | [{},{}]                    |
-| ├─ oper_id   | integer   | 必须   |     | 操作ID                           | 操作ID官方提供                   |
+| ├─ oper_id   | string    | 必须   |     | 操作ID                           | 操作ID官方提供                   |
 | ├─ gid       | integer   | 非必须  |     | 群组ID                           |                            |
 | ├─ target_id | string    | 非必须  |     | 频道ID                           |                            |
-| ├─ to_uid    | object    | 非必须  |     | 接收者uid                         | 群聊为at_msg中uid，私聊为target_id |
+| ├─ to_uid    | integer   | 非必须  |     | 接收者uid                         | 群聊为at_msg中uid，私聊为target_id |
 | ├─ scope     | string    | 非必须  |     | 消息范围 channel:频道消息,private:私聊信息 | 默认channel                  |
 | ├─ ext1      | string    | 非必须  |     | 扩展字段1                          |                            |
 | ├─ ext2      | string    | 非必须  |     | 扩展字段2                          |                            |
