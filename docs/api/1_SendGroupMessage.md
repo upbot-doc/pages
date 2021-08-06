@@ -264,17 +264,17 @@ sort: 1
 			"type": 5,
 			"displayName": "H5",
 			"h5_ext": {
-				"gid": 10123,
-				"bot_id": 100000030,
+				"gid": 10086,
+				"bot_id": 100000001,
 				"url": "https://www.example.com/"
 			}
 		}, {
 			"type": 6,
 			"displayName": "自定义bot配置页",
 			"botcustom_ext": {
-				"gid": 10123,
-				"bot_id": 100000030,
-				"params": "{\"gid\":15407,\"botId\":\"100000007\"}"
+				"gid": 10086,
+				"bot_id": 100000001,
+				"params": "{\"gid\":10086,\"bot_id\":\"100000001\"}"
 			}
 		}]
 	}
