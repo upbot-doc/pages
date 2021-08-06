@@ -210,19 +210,28 @@ sort: 1
 
 ### 链接消息
 
-| 名称            | 类型      | 是否必须 | 默认值 | 备注                | 其他信息                    |
-| --------------- | --------- | -------- | ------ | ------------------- | --------------------------- |
-| link_to_msg     | object [] | 非必须   |        | 链接跳转消息        | [{},{}]                     |
-| ├─ type         | integer   | 非必须   | 0      | 链接类型            | 1-频道；2-外站；3-Bot设置页 |
-| ├─ display_name | string    | 非必须   |        | 显示文案            |                             |
-| ├─ channel_ext  | object    | 非必须   |        | 频道跳转内容 type=1 | {}                          |
-| ├─── gid        | integer   | 非必须   |        | 群组ID              | 仅支持相同群组频道跳转      |
-| ├─── cid        | string    | 非必须   |        | 频道ID              |                             |
-| ├─ website_ext  | object    | 非必须   |        | 外站跳转内容 type=2 | {}                          |
-| ├─── url        | string    | 非必须   |        | 链接地址            | 必须 https                  |
-| ├─ botconf_ext  | object    | 非必须   |        | Bot设置页 type=3    | {}                          |
-| ├─── gid        | string    | 非必须   |        | 群组ID              | 仅支持相同群组Bot配置页跳转 |
-| ├─── bot_id     | string    | 非必须   |        | Bot ID              |                             |
+| 名称              | 类型        | 是否必须 | 默认值 | 备注                   | 其他信息               |
+|-----------------|-----------|------|-----|----------------------|--------------------|
+| link_to_msg     | object [] | 非必须  |     | 链接跳转消息               | [{},{}]            |
+| ├─ type         | integer   | 非必须  | 0   | 链接类型                 | 1-频道；2-外站；3-Bot设置页 |
+| ├─ display_name | string    | 非必须  |     | 显示文案                 |                    |
+| ├─ channel_ext  | object    | 非必须  |     | 频道跳转内容 type=1        | {}                 |
+| ├─── gid        | integer   | 非必须  |     | 群组ID                 | 仅支持相同群组频道跳转        |
+| ├─── cid        | string    | 非必须  |     | 频道ID                 |                    |
+| ├─ website_ext  | object    | 非必须  |     | 外站跳转内容 type=2        | {}                 |
+| ├─── url        | string    | 非必须  |     | 链接地址                 | 必须 https           |
+| ├─ botconf_ext  | object    | 非必须  |     | Bot设置页 type=3        | {}                 |
+| ├─── gid        | integer   | 非必须  |     | 群组ID                 | 仅支持相同群组Bot配置页跳转    |
+| ├─── bot_id     | integer   | 非必须  |     | Bot ID               |                    |
+| ├─ h5_ext       | object    | 非必须  |     | H5带sig参数 type=5      | {}                 |
+| ├─── gid        | integer   | 非必须  |     | 群组ID                 | 仅支持相同群组Bot配置页跳转    |
+| ├─── bot_id     | integer   | 非必须  |     | Bot ID               |                    |
+| ├─── url        | string    | 非必须  |     | H5链接地址               | 必须 https           |
+| ├─botcustom_ext | object    | 非必须  |     | 带自定义参数扽Bot设置页 type=6 | {}                 |
+| ├─── gid        | integer   | 非必须  |     | 群组ID                 |                    |
+| ├─── bot_id     | integer   | 非必须  |     | Bot ID               |                    |
+| ├─── params     | string    | 非必须  |     | 自定义参数，必须为json格式字符串   | 会透传到配置页            |
+
 
 #### 示例
 
@@ -250,6 +259,22 @@ sort: 1
 			"displayName": "外站跳转 ",
 			"website_ext": {
 				"url": "https://www.example.com/"
+			}
+		}, {
+			"type": 5,
+			"displayName": "H5",
+			"h5_ext": {
+				"gid": 10123,
+				"bot_id": 100000030,
+				"url": "https://www.example.com/"
+			}
+		}, {
+			"type": 6,
+			"displayName": "自定义bot配置页",
+			"botcustom_ext": {
+				"gid": 10123,
+				"bot_id": 100000030,
+				"params": "{\"gid\":15407,\"botId\":\"100000007\"}"
 			}
 		}]
 	}
