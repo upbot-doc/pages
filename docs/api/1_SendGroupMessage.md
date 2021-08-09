@@ -214,7 +214,7 @@ sort: 1
     "nonce": "123",
     "l2_type": 1,
     "body": {
-        "content": "示例混合消息文本",
+        "content": "示例消息文本",
         "at_msg": {
             "at_type": 1,
             "at_uid_list": [
