@@ -43,6 +43,8 @@ playload数据主要包括：
 - gid : 群组编号
 - bot_id : Bot编号
 - uid : 用户编号
+- nickname : 用户昵称，默认为群组昵称
+- avatar : 用户头像，图片无后缀，不影响页面渲染
 - iat : 签发时间戳
 - exp : 有效期（单位秒）
 
