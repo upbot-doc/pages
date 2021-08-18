@@ -44,3 +44,6 @@ sort: 2
 | ├─ status     | integer | 非必须  | 1   | 状态     | 1 有效 2 删除 |
 | ├─ deleter_id | string  | 非必须  | "0" | 删除者ID |           |
 | ├─ del_uts    | string  | 非必须  | "0" | 删除时间戳秒  |           |
+| ├─ cate_list    | object []  | 非必须  |  | 群组频道分类列表  |[{},{}]           |
+| ├─── caid    | string  | 非必须  |  |  分类ID |         |
+| ├─── name    | string  | 非必须  |  | 分类名称  |        |
