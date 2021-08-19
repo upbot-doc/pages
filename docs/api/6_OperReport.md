@@ -66,7 +66,7 @@ sort: 6
 | oper_id   | oper_id       |
 | gid       | 群组ID                  |
 | target_id | 频道ID                  |
-| uid    | 创建者uid |
+| uid    | 操作者uid |
 | ext1     | 投票ID               |
 
 ## 抽奖数据需求
@@ -82,6 +82,6 @@ sort: 6
 | oper_id   | oper_id       |
 | gid       | 群组ID                  |
 | target_id | 频道ID                  |
-| uid    | 创建者uid |
+| uid    | 操作者uid |
 | ext1     | 抽奖ID               |
 
