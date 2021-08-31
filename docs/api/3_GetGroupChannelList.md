@@ -43,7 +43,7 @@ sort: 3
 | ├─ cid_str     | string    | 非必须  |     | str类型频道ID                    |
 | ├─ mem_num     | integer   | 非必须  |     | 频道成员数                        |
 | ├─ score       | string    | 非必须  |     | 创建初始分值                       |
-| ├─ block       | integer   | 非必须  |     | 禁言                           |
+| ├─ block       | integer   | 非必须  |     | 禁言。1 仅管理员可以发言 2 所有人可以发言 |
 | ├─ status      | integer   | 非必须  |     | 状态                           |
 | ├─ creator_id  | string    | 非必须  |     | 创建用户ID                       |
 | ├─ crt_uts     | string    | 非必须  |     | 创建时间戳秒                       |
