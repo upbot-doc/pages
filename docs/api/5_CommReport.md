@@ -44,6 +44,7 @@ sort: 5
 | ├─ ext8      | string    | 非必须  |     | 扩展字段8                          |                            |
 | ├─ ext9      | string    | 非必须  |     | 扩展字段9                          |                            |
 | ├─ ext10     | string    | 非必须  |     | 扩展字段10                         |                            |
+| ├─ msg_seq     | integer    | 非必须  |     | 消息序号                         |                            |
 
 
 ## 返回数据
@@ -90,6 +91,7 @@ Bot每发送一条消息均上报一条数据。
 | ext1      | youtube               |
 | ext2      | 订阅up主/频道名             |
 | ext3      | 消息类型（1=推荐订阅提醒，2=推送内容）      -- 新增需求        |
+| msg_seq      | 消息序号      -- 新增需求2       |
 
 ## 投票数据需求
 
@@ -125,6 +127,7 @@ Bot每发送一条消息均上报一条数据。
 | target_id | 频道ID                  |
 | to_uid    | 接收者uid ，群聊为at_msg中uid |
 | scope     | channel               |
+| msg_seq      | 消息序号      -- 新增需求2        |
 
 ## 抽奖数据需求
 
@@ -160,3 +163,4 @@ Bot每发送一条消息均上报一条数据。
 | target_id | 频道ID                  |
 | to_uid    | 接收者uid ，群聊为at_msg中uid |
 | scope     | channel               |
+| msg_seq      | 消息序号      -- 新增需求2        |
