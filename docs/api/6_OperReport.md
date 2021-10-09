@@ -31,7 +31,7 @@ sort: 6
 | nonce        | string    | 必须   |     | 随机字符串                          |                            |
 | data    | object | 必须   |     | 上报数据内容        | {}                   |
 | ├─ oper_id   | string    | 必须   |     | 操作ID                           | 操作ID官方提供                   |
-| ├─ gid       | integer   | 非必须  |     | 群组ID                           |                            |
+| ├─ gid       | integer   | 非必须  |     | 房间ID                           |                            |
 | ├─ target_id | string    | 非必须  |     | 频道ID                           |                            |
 | ├─ uid    | integer   | 非必须  |     | 操作者UID                         |  |
 | ├─ ext1      | string    | 非必须  |     | 扩展字段1                          |                            |
@@ -64,7 +64,7 @@ sort: 6
 | 字段        | 值                     |
 |-----------|-----------------------|
 | oper_id   | oper_id       |
-| gid       | 群组ID                  |
+| gid       | 房间ID                  |
 | target_id | 频道ID                  |
 | uid    | 操作者uid |
 | ext1     | 投票ID               |
@@ -80,7 +80,7 @@ sort: 6
 | 字段        | 值                     |
 |-----------|-----------------------|
 | oper_id   | oper_id       |
-| gid       | 群组ID                  |
+| gid       | 房间ID                  |
 | target_id | 频道ID                  |
 | uid    | 操作者uid |
 | ext1     | 抽奖ID               |

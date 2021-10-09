@@ -2,7 +2,7 @@
 sort: 3
 ---
 
-# 获取群组频道列表
+# 获取房间频道列表
 
 ## 基本信息
 
@@ -25,7 +25,7 @@ sort: 3
 
 | 名称  | 类型      | 是否必须 | 默认值 | 备注   | 其他信息 |
 |-----|---------|------|-----|------|------|
-| gid | integer | 必须   |     | 群组ID |      |
+| gid | integer | 必须   |     | 房间ID |      |
 
 ## 返回数据
 
@@ -38,7 +38,7 @@ sort: 3
 | ├─ name        | string    | 非必须  |     | 频道名称                         |
 | ├─ profile     | string    | 非必须  |     | 简介                           |
 | ├─ caid        | string    | 非必须  |     | 归属分类ID                       |
-| ├─ gid         | string    | 非必须  |     | 归属群组ID                       |
+| ├─ gid         | string    | 非必须  |     | 归属房间ID                       |
 | ├─ is_cmd_chan | integer   | 非必须  |     | 0 普通频道 1 低优先级信令频道 2 高优先级信令频道 |
 | ├─ cid_str     | string    | 非必须  |     | str类型频道ID                    |
 | ├─ mem_num     | integer   | 非必须  |     | 频道成员数                        |
