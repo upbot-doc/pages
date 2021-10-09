@@ -45,6 +45,7 @@ order_by表示排序方式，支持字段: total_signed、continuous_signed、ha
 **暂不支持组合顺序**：先按总签到数升序，再按连续签到降序：`+total_signed,-continuous_signed`
 
 ## 返回数据
+
 | 名称                     | 类型      | 是否必须 | 默认值 | 备注     | 其他信息             |
 |------------------------|---------|------|-----|--------|------------------|
 | ret                    | integer | 必须   |     |        |                  |
@@ -52,9 +53,9 @@ order_by表示排序方式，支持字段: total_signed、continuous_signed、ha
 | data                   | object  | 非必须  |     |        | {}               |
 | ├─ total               | integer | 非必须  |     | 累计签到次数 |                  |
 | ├─ payload             | integer | 非必须  |     | 连续签到次数 | [{},{},{}]       |
-| ├─── uid               | string    | 非必须  |     | 用户ID   |                  |
-| ├─── total_signed      | string | 非必须  |     | 累计签到次数 |     "0"             |
-| ├─── continuous_signed | string | 非必须  |     | 连续签到次数 |       "0"           |
+| ├─── uid               | string  | 非必须  |     | 用户ID   |                  |
+| ├─── total_signed      | string  | 非必须  |     | 累计签到次数 | "0"              |
+| ├─── continuous_signed | string  | 非必须  |     | 连续签到次数 | "0"              |
 | ├─── has_signed_today  | bool    | 非必须  |     | 今天是否已签 | true：已签，false：未签 |
 | ├─── latest_sign_date  | string  | 非必须  |     | 最近签到日期 | date格式均为20060102 |
 
