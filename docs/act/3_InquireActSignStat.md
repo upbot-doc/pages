@@ -33,7 +33,8 @@ sort: 3
 | offset     | integer | 非必须  | 0   | 分页偏移                 |                  |
 | limit      | integer | 必须   |     | 返回结果上限               |                  |
 | order_by   | string  | 非必须  |     | 排序方式                 |                  |
-| min_sign_count   | integer  | 非必须  |     | 次数筛选          |  结合order_by使用 |
+| min_sign_count   | integer  | 非必须  |     | 次数筛选,最小值    |  结合order_by使用 |
+| max_sign_count   | integer  | 非必须  |     | 次数筛选,最大值    |  结合order_by使用 |
 | ts         | integer | 必须   |     | 时间戳                  |                  |
 | nonce      | string  | 必须   |     | 随机字符串                |                  |
 
@@ -47,6 +48,8 @@ order_by表示排序方式，支持字段: total_signed、continuous_signed、ha
 
 min_sign_count：累计签到次数或连续签到次数筛选的最小值，根据order_by的排序方式做筛选。
 例如：order_by为`+total_signed`, min_sign_count为`30`,则查询结果为总签到次数大于30的签到数据。
+
+max_sign_count：累计签到次数或连续签到次数筛选的最大值，根据order_by的排序方式做筛选。
 
 ## 返回数据
 
