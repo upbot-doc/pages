@@ -67,7 +67,7 @@ sort: 5
 | oper_id | 1502007320601 |
 | gid     | 房间ID          |
 | ext1    | 该群订阅UP主或频道数量  |
-| ext2    | 订阅途径（1=指令，2=UI）-- 新增需求  |
+| ext2    | 订阅途径（1=指令，2=UI） |
 
 ### 2. 消息上报
 
@@ -90,8 +90,8 @@ Bot每发送一条消息均上报一条数据。
 | scope     | channel               |
 | ext1      | youtube               |
 | ext2      | 订阅up主/频道名             |
-| ext3      | 消息类型（1=推荐订阅提醒，2=推送内容）      -- 新增需求        |
-| msg_seq      | 消息序号      -- 新增需求2       |
+| ext3      | 消息类型（1=推荐订阅提醒，2=推送内容）   |
+| msg_seq      | 消息序号    |
 
 ## 投票数据需求
 
@@ -127,7 +127,7 @@ Bot每发送一条消息均上报一条数据。
 | target_id | 频道ID                  |
 | to_uid    | 接收者uid ，群聊为at_msg中uid |
 | scope     | channel               |
-| msg_seq      | 消息序号      -- 新增需求2        |
+| msg_seq      | 消息序号             |
 
 ## 抽奖数据需求
 
@@ -163,4 +163,4 @@ Bot每发送一条消息均上报一条数据。
 | target_id | 频道ID                  |
 | to_uid    | 接收者uid ，群聊为at_msg中uid |
 | scope     | channel               |
-| msg_seq      | 消息序号      -- 新增需求2        |
+| msg_seq      | 消息序号       |
