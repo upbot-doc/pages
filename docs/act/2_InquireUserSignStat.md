@@ -46,6 +46,7 @@ sort: 2
 | ├─ continuous_signed | string | 非必须  |     | 连续签到次数 |   "0"               |
 | ├─ has_signed_today  | bool    | 非必须  |     | 今天是否已签 | true：已签，false：未签 |
 | ├─ latest_sign_date  | string  | 非必须  |     | 最近签到日期 | date格式均为20060102 |
+| ├─ max_continuous_signed  | string  | 非必须  |     | 最大连续签到次数 | "0"    |
 
 ### 返回示例
 ```json
