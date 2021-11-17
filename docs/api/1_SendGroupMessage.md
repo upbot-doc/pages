@@ -37,6 +37,7 @@ sort: 1
 | ├─ at_msg            | object     | 非必须  |     | @消息 at消息                  | {}                                           |
 | ├─ link_to_msg       | object []  | 非必须  |     | 链接跳转消息                    | [{},{}]                                      |
 | ├─ bot_data          | object     | 非必须  |     | Bot特殊消息                   |                                              |
+| ├─ custom_uid_list          | integer []     | 非必须  |     | 特定场景消息，无需关注                   |   []                                           |
 
 
 ### 文本消息
