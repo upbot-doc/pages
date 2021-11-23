@@ -25,7 +25,7 @@ sort: 1
 
 | 名称                                                      | 类型       | 是否必须 | 备注                                                         |
 | ------------                                             | ---------- | -------- | :----------------------------------------------------------- |
-| signal                                                   | integer    | 必须     | 消息类型,1:消息 ,2:心跳;3:加群;4:退群                        |
+| signal                                                   | string    | 必须     | 消息类型,1:消息 ,2:心跳;3:加群;4:退群                        |
 | verify_token                                             | string     | 必须     | 验证token(判断消息合法性)                                   |
 | heartbeat                                                | string     | 非必须     | 消息类型为2时，需原样返回                                  |
 | group_info                                               | object     | 非必须   | 加群退群信息(可做加群初始化逻辑)                             |
@@ -34,11 +34,11 @@ sort: 1
 | &nbsp;&nbsp;&nbsp;├ scope                                | string     | 非必须   | 消息范围 channel:频道消息,private:私聊信息                   |
 | &nbsp;&nbsp;&nbsp;├ l2_type                              | integer    | 非必须   | 消息内容类型 1:文本消息,2:视频消息，3:图片消息,4:文件消息,5:音频消息,6:信令消息,<br>7:富文本消息8:markdown消息,9:卡片消息,10:系统消息,11:表情消息,12混合消息,13互动消息 |
 | &nbsp;&nbsp;&nbsp;├ l3_types                             | integer[]  | 非必须   | 消息包含类型 1:回复消息;2表态消息;3:at消息;4:内部链接     |
-| &nbsp;&nbsp;&nbsp;├ sender_uid                           | integer    | 非必须   | 发送方uid                                                    |
+| &nbsp;&nbsp;&nbsp;├ sender_uid                           | string    | 非必须   | 发送方uid                                                    |
 | &nbsp;&nbsp;&nbsp;├ msg_id                               | string     | 非必须   | 消息id                                                       |
-| &nbsp;&nbsp;&nbsp;├ gid                                  | integer    | 非必须   | 群组ID; 消息范围为private时为0                               |
-| &nbsp;&nbsp;&nbsp;├ target_id                            |  integer   | 非必须   | 目标ID; 消息范围channel:目标的频道id; 消息范围person:接收人ID |
-| &nbsp;&nbsp;&nbsp;├ ts                                   | integer    | 非必须   | 发送时间的毫秒时间戳                                         |
+| &nbsp;&nbsp;&nbsp;├ gid                                  | string    | 非必须   | 群组ID; 消息范围为private时为0                               |
+| &nbsp;&nbsp;&nbsp;├ target_id                            |  string   | 非必须   | 目标ID; 消息范围channel:目标的频道id; 消息范围person:接收人ID |
+| &nbsp;&nbsp;&nbsp;├ ts                                   | string    | 非必须   | 发送时间的毫秒时间戳                                         |
 | &nbsp;&nbsp;&nbsp;├ nonce                                | string     | 非必须   | 随机串，与用户消息发送 api 中传的 nonce 保持一致             |
 | &nbsp;&nbsp;&nbsp;├ body                                 | object     | 非必须   | 不同的消息不同的格式                                         |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├ content            | string     | 非必须   | 文本内容                                                     |
@@ -98,11 +98,11 @@ sort: 1
 | --------------- | --------- | -------- | ------ | ---------------------------- | -------- |
 | video_info      | object [] | 非必须   |        | 视频消息                     | [{},{}]  |
 | ├─ video_url    | string    | 非必须   |        | 视频地址                     |          |
-| ├─ video_size   | integer   | 非必须   |        | 视频数据大小，单位：字节     |          |
+| ├─ video_size   | string   | 非必须   |        | 视频数据大小，单位：字节     |          |
 | ├─ video_second | integer   | 非必须   |        | 视频时长，单位：秒           |          |
 | ├─ video_format | string    | 非必须   |        | 视频格式，例如 mp4           |          |
 | ├─ thumb_url    | string    | 非必须   |        | 视频缩略图地址               |          |
-| ├─ thumb_size   | integer   | 非必须   |        | 缩略图大小，单位：字节       |          |
+| ├─ thumb_size   | string   | 非必须   |        | 缩略图大小，单位：字节       |          |
 | ├─ thumb_width  | integer   | 非必须   |        | 缩略图宽度                   |          |
 | ├─ thumb_height | integer   | 非必须   |        | 缩略图高度                   |          |
 | ├─ thumb_format | string    | 非必须   |        | 缩略图格式，例如 JPG、BMP 等 |          |
@@ -198,7 +198,7 @@ sort: 1
 | ------------------- | ---------  | -------- | ------ | ------------------------------------| ---------------------------------------------------- |
 | file_info           | object[]   | 非必须   |         | 图片消息                             | [{},{}]                                              |
 | ├── url             | string     | 非必须   |         |文件下载地址                          |                                                     |
-| ├── file_size       | integer    | 非必须   |         | 文件数据大小，单位：字节              |                                                     |
+| ├── file_size       | string    | 非必须   |         | 文件数据大小，单位：字节              |                                                     |
 | ├── file_name       | string     | 非必须   |         |文件名称                             |                                                     |
 | ├── download_flag   | integer    | 非必须   |         |文件下载方式标记                      |                                                     |
 
@@ -233,9 +233,9 @@ sort: 1
 | ------------------- | ---------  | ------- | ------ | ------------------------------------ | ---------------------------------------------------- |
 | audio_info          | object[]   | 非必须   |        | 图片消息                             | [{},{}]                                              |
 | ├── url             | string     | 非必须   |        |语音下载地址                           |                                                     |
-| ├── size            | integer    | 非必须   |        | 语音数据大小，单位：字节               |                                                     |
-| ├── second          | integer    | 非必须   |        |语音数据大小，单位：字节                |                                                     |
-| ├── download_flag   | integer    | 非必须   |        |文件下载方式标记                        |                                                     |
+| ├── size            | string    | 非必须   |        | 语音数据大小，单位：字节               |                                                     |
+| ├── second          | string    | 非必须   |        |语音数据大小，单位：字节                |                                                     |
+| ├── download_flag   | string    | 非必须   |        |文件下载方式标记                        |                                                     |
 
 
 ##### 示例
@@ -361,8 +361,8 @@ sort: 1
 | 名称                    | 类型        | 是否必须 | 默认值  | 备注                                 | 其他信息                                             |
 | -------------------     | ---------  | -------  | ------ | ------------------------------------ | ---------------------------------------------------- |
 | sticker_msg             | object     | 非必须    |        | 表情消息                             |                                                     |
-| ├── sticker_id          | integer    | 非必须    |        | 表情id                               |                                                     |
-| ├── sticker_package_id  | integer    | 非必须    |        | 表情包id                             |                                                     |
+| ├── sticker_id          | string    | 非必须    |        | 表情id                               |                                                     |
+| ├── sticker_package_id  | string    | 非必须    |        | 表情包id                             |                                                     |
 | ├── url                 | string     | 非必须    |        | 表情包图片链接                        |                                                     |
 | ├── width               | integer    | 非必须    |        | 图片宽度                              |                                                     |
 | ├── height              | integer    | 非必须    |        | 图片高度                              |                                                     |
@@ -438,13 +438,13 @@ sort: 1
 | ├── choose_type            | integer    | 非必须   |        | 选择类型 1:单选 2:多选                   |                               |
 | ├── enable_cancel          | integer    | 非必须   |        | 是否支持取消 1:是,0:否                    |                               |
 | ├── interactions           | object[]   | 非必须   |        | 单项明细                                 |  [{},{}]                             |
-| ├───── id                  | integer    | 非必须   |        | id                                      |                               |
+| ├───── id                  | string    | 非必须   |        | id                                      |                               |
 | ├───── content             | string     | 非必须   |        | 文字+表情                                |                               |
-| ├───── statistics          | integer    | 非必须   |        | 统计数量                                 |                               |
+| ├───── statistics          | string    | 非必须   |        | 统计数量                                 |                               |
 | ├───── type                | integer    | 非必须   |        | 类型,1:指令,2:投票,3:接口                 |                               |
 | ├───── if_show_result      | integer    | 非必须   |        | 否显示统计结果,1:是,0:否                  |                               |
 | ├───── if_clicked          | integer    | 非必须   |        | 是否已经点过,1:是,0:否                    |                               |
-| ├───── interaction_id      | integer    | 非必须   |        | id                                       |                               |
+| ├───── interaction_id      | string    | 非必须   |        | id                                       |                               |
 
 
 ##### 示例
@@ -485,7 +485,7 @@ sort: 1
 | 名称      | 类型    | 是否必须 | 默认值 | 备注                | 其他信息 |
 | --------- | ------- | -------- | ------ | ------------------- | -------- |
 | bot_data  | object  | 非必须   |        | Bot特殊消息         |          |
-| ├─ cmd_id | integer | 非必须   |        | Bot消息命中的指令ID |          |
+| ├─ cmd_id | string | 非必须   |        | Bot消息命中的指令ID |          |
 
 ##### 示例
 
@@ -505,9 +505,9 @@ sort: 1
 | 名称           | 类型    | 是否必须 | 默认值 | 备注                    | 其他信息 |
 | -------------- | ------- | -------- | ------ | ----------------------- | -------- |
 | reply_msg      | object  | 非必须   |        | 回复消息                | {}       |
-| ├─ uid_replied | integer | 非必须   |        | 被回复者uid             |          |
+| ├─ uid_replied | string | 非必须   |        | 被回复者uid             |          |
 | ├─ content     | string  | 非必须   |        | 被回复的消息内容,展示用 |          |
-| ├─ msg_seq     | integer | 非必须   |        | 被回复的消息唯一标识    |          |
+| ├─ msg_seq     | string | 非必须   |        | 被回复的消息唯一标识    |          |
 | ├─ msg_id      | string  | 非必须   |        | 消息id                  |          |
 
 ##### 示例
@@ -532,7 +532,7 @@ sort: 1
 | -------------- | ---------- | -------- | ------ | ------------------------------------ | ----------------- |
 | at_msg         | object     | 非必须   |        | @消息 at消息                         | {}                |
 | ├─ at_type     | integer    | 非必须   | 0      | @类型,部分@时候才需要填写at_uid_list | 1-部分人 2-所有人 |
-| ├─ at_uid_list | integer [] | 非必须   |        | 被@用户id列表                        |                   |
+| ├─ at_uid_list | string [] | 非必须   |        | 被@用户id列表                        |                   |
 
 ##### 示例
 
@@ -557,7 +557,7 @@ sort: 1
 | ├─ type         | integer   | 非必须   | 0      | 链接类型            | 1-频道；2-外站；3-Bot设置页 |
 | ├─ display_name | string    | 非必须   |        | 显示文案            |                             |
 | ├─ channel_ext  | object    | 非必须   |        | 频道跳转内容 type=1 | {}                          |
-| ├─── gid        | integer   | 非必须   |        | 群组ID              | 仅支持相同群组频道跳转      |
+| ├─── gid        | string   | 非必须   |        | 群组ID              | 仅支持相同群组频道跳转      |
 | ├─── cid        | string    | 非必须   |        | 频道ID              |                             |
 | ├─ website_ext  | object    | 非必须   |        | 外站跳转内容 type=2 | {}                          |
 | ├─── url        | string    | 非必须   |        | 链接地址            | 必须 https                  |
