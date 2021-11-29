@@ -49,3 +49,4 @@ sort: 3
 | ├─ crt_uts     | string    | 非必须  |     | 创建时间戳秒                       |
 | ├─ deleter_id  | string    | 非必须  |     | 删除者ID                        |
 | ├─ del_uts     | string    | 非必须  |     | 删除时间戳秒                       |
+| ├─ type        | integer    | 非必须  |     | 频道类型: 0 公开频道 1 私密频道     |
