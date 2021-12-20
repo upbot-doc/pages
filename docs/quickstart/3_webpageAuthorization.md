@@ -20,6 +20,25 @@ sort: 3
 
 ### 1 获取code
 
+1. 绑定域名，与bot服务沟通，设置botId及前端域名
+2. 引入js文件`https://knock.gtimg.com/web/open/js/knockbot-1.0.0.js`
+3. 设置环境（正式or测试）
+    ```javascript
+    window.knockBotLib.setStage('test'); // 测试环境
+    window.knockBotLib.setStage('prod'); // 正式环境
+    ```
+4. 获取鉴权code
+    ```javascript
+    window.knockBotLib.authorize({
+      appid: '100000', // botId
+      redirectUri: 'https://xxx.com', // 回调地址
+      responseCode: 'code', // 固定为code
+      scope: 'openapi_userinfo', // 固定为openapi_userinfo
+      state: Math.floor(Math.random() * 1000000), // 随机数字，回调时会带回来
+    });
+    ```
+5. 等待页面跳回到`redirectUri`，此时会附带`code`参数，`state`参数，如果失败会有`ret`参数，例`https://xxx.com?code=123&state=123&ret=0`
+
 ### 2 通过code换取网页授权access_token
 
 **Path：** /web/auth/AccessToken
