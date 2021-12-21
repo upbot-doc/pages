@@ -56,7 +56,6 @@ sort: 3
 | 名称           | 类型     | 是否必须 | 默认值 | 备注                     | 其他信息         |
 |--------------|--------|------|-----|------------------------|--------------|
 | appid        | string | 必须   |     | 机器人唯一标识                | bot_id字符串类型 |
-| redirect_uri | string | 必须   |     | 授权后重定向的回调链接地址          |              |
 | secret       | string | 必须   |     | 机器人的secret             | 官方提供         |
 | code         | string | 必须   |     | 填写第一步获取的code参数         |              |
 | grant_type   | string | 必须   |     | 填写为 authorization_code |              |
