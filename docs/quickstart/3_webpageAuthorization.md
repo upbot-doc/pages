@@ -31,7 +31,7 @@ sort: 3
     ```javascript
     window.knockBotLib.authorize({
       appid: '100000', // botId
-      redirectUri: 'https://xxx.com', // 回调地址
+      redirectUri: 'https://www.noknok.cn', // 回调地址
       responseCode: 'code', // 固定为code
       scope: 'openapi_userinfo', // 固定为openapi_userinfo
       state: Math.floor(Math.random() * 1000000), // 随机数字，回调时会带回来
