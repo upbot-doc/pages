@@ -57,7 +57,7 @@ sort: 3
 |--------------|--------|------|-----|------------------------|--------------|
 | appid        | string | 必须   |     | 机器人唯一标识                | bot_id字符串类型 |
 | secret       | string | 必须   |     | 机器人的secret             | 官方提供         |
-| code         | string | 必须   |     | 填写第一步获取的code参数         |              |
+| code         | string | 必须   |     | 填写第一步获取的code参数         |    有效期5分钟，只能使用一次          |
 | grant_type   | string | 必须   |     | 填写为 authorization_code |              |
 
 **返回说明：**
