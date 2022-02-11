@@ -1,12 +1,12 @@
 ---
-sort: 5
+sort: 6
 ---
 
-# 操作表态消息
+# 文本检测
 
 ## 基本信息
 
-**Path：** /api/act/OptMsgReaction
+**Path：** /api/act/UserInputCheck
 
 **Method：** POST
 
@@ -25,11 +25,7 @@ sort: 5
 
 | 名称          | 类型      | 是否必须 | 默认值 | 备注             | 其他信息            |
 |-------------|---------|------|-----|----------------|-----------------|
-| opt         | integer | 必须   |     | 操作类型 1 增加｜2 删除 |                 |
-| msg_seq     | integer | 必须   |     | 消息序列号          |                 |
-| channel_id  | string  | 必须   |     | 频道ID，字符串类型     |                 |
-| reaction_id | integer | 必须   |     | 表态ID           |                 |
-| l2_type     | integer | 必须   |     | 消息类型           | msg_seq的l2_type |
+| word        | string  | 必须   |     | 待检测文本     |                 |
 | ts          | integer | 必须   |     | 时间戳            |                 |
 | nonce       | string  | 必须   |     | 随机字符串          |                 |
 
@@ -38,12 +34,7 @@ sort: 5
 {
     "ts": 1641006865,
     "nonce": "nonce",
-    "token": "token",
-    "opt": 1,
-    "msg_seq": 463,
-    "channel_id": "22658",
-    "reaction_id": 100,
-    "l2_type": 1
+    "word": "文本内容"
 }
 ```
 
@@ -53,12 +44,18 @@ sort: 5
 |------------------------|---------|------|-----|--------|------------------|
 | ret                    | integer | 必须   |     |       |                  |
 | msg                    | string  | 必须   |     |       |                  |
-
+| result                   | object  | 非必须  |     |        | {}               |
+| ├─ level               | integer | 必须  |     | 风险等级 |        0无风险 1有风险          |
+| ├─ message             | string | 必须  |     | 风险提示 | 仅做提示使用，不可用于逻辑判断     |
 
 ### 示例
 ```json
 {
     "ret": 0,
-    "msg": "ok"
+    "msg": "ok",
+    "result": {
+        "level": 0,
+        "message": "PASS"
+    }
 }
 ```
