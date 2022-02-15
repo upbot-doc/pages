@@ -38,7 +38,6 @@ sort: 5
 {
     "ts": 1641006865,
     "nonce": "nonce",
-    "token": "token",
     "opt": 1,
     "msg_seq": 463,
     "channel_id": "22658",
