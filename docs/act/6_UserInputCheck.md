@@ -30,13 +30,15 @@ sort: 6
 | nonce       | string  | 必须   |     | 随机字符串          |                 |
 | words       | string []  | 非必须   |     | 待检测文本列表     | 批量检测，最多支持10条  |
 | openid       | string | 必须   |     | 字符串类型的uid     |                 |
+| activity_id  | string | 非必须   |     | 活动ID | 拼接而成的字符串，能够通过此ID定位到内容，例如：{bot_id}-{gid}-{vote_id}  |
 
 ### 示例
 ```json
 {
     "ts": 1641006865,
     "nonce": "nonce",
-    "word": "文本内容"
+    "word": "文本内容",
+    "activity_id": "1000009828-10123-1021"
 }
 ```
 或
