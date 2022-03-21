@@ -30,6 +30,7 @@ sort: 4
 | uid      | integer | 必须   |     | 用户ID |      |
 | perms_id | integer | 必须   |     | 权限ID |      |
 | cid | integer | 非必须   |     | 频道ID |      |
+| check_ban | integer | 非必须   |     | 是否检查用户封禁 |  0不检查1检查    |
 
 **权限列表**
 
@@ -46,3 +47,9 @@ sort: 4
 | ret | integer | 必须   | 0   |                      |      |
 | msg | string  | 必须   | ok  |                      |      |
 | has | bool    | 必须   |     | true-有权限 false-无权限 |      |
+
+### 特殊错误码说明
+
+| 错误码     | 说明                   |
+|------|----------------------|
+| 80033  | 用户被封禁，错误消息直接返回给用户。 |
