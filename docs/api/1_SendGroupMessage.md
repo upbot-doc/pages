@@ -75,8 +75,8 @@ sort: 1
 	"body": {
 		"reply_msg": {
 			"content": "[图片]",
-			"uid_replied": "10000086",
-			"msg_seq": "200002121210000086",
+			"uid_replied": 10000086,
+			"msg_seq": 200002121210000086,
 			"msg_id": "03c7c0ace395d80182db07ae2c30f034"
 		}
 	}
