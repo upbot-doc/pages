@@ -32,9 +32,7 @@ sort: 2
 | 名称            | 类型      | 是否必须 | 默认值 | 备注     | 其他信息      |
 |---------------|---------|------|-----|--------|-----------|
 | ret           | integer | 必须   |     |        |           |
-| ret           | integer | 必须   |     |        |           |
 | msg           | string  | 必须   |     |        |           |
-| group_info    | object  | 非必须  |     |        | {}        |
 | group_info    | object  | 非必须  |     |        | {}        |
 | ├─ gid        | string  | 非必须  |     | 房间ID   |           |
 | ├─ avatar     | string  | 非必须  |     | 房间头像   |           |
