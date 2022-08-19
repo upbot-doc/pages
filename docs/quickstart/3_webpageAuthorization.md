@@ -72,6 +72,7 @@ sort: 3
 | ├─ refresh_token  | string  |      |     | 用户刷新access_token,有效期30天     |                         |
 | ├─ openid         | string  |      |     | 用户唯一标识                      | uid 字符串类型               |
 | ├─ scope          | string  |      |     | 作用域                         | 目前会固定返回openapi_userinfo |
+| ├─ business_uid          | string  |      |     | sx                         |  |
 
 ### 3 拉取用户信息(需scope为 openapi_userinfo)
 
@@ -98,6 +99,7 @@ sort: 3
 | ├─ nickname | string  |      |     | 用户群昵称  |           |
 | ├─ avatar   | string  |      |     | 用户头像   |           |
 | ├─ gid      | string  |      |     | 房间ID   |           |
+| ├─ business_uid      | string  |      |     | sx   |           |
 
 
 ### 4 刷新access_token（如果需要）
