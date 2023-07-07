@@ -1,5 +1,5 @@
 source "https://gems.ruby-china.com" # gems.ruby-china.com rubygems.org
 
-gem "jekyll-rtd-theme"
+gem "pages-themes/cayman@v0.2.0"
 
 gem "github-pages", group: :jekyll_plugins
