@@ -29,11 +29,11 @@ sort: 3
 4. 获取鉴权code
 ```javascript
 window.xxxx.authorize({
-appid: '100000', // appid
-redirectUri: 'https://www.xxxxx.cn', // 回调地址
-responseCode: 'code', // 固定为code
-scope: 'openapi_userinfo', // 固定为openapi_userinfo
-state: Math.floor(Math.random() * 1000000), // 随机数字，回调时会带回来
+    appid: '100000', // appid
+    redirectUri: 'https://www.xxxxx.cn', // 回调地址
+    responseCode: 'code', // 固定为code
+    scope: 'openapi_userinfo', // 固定为openapi_userinfo
+    state: Math.floor(Math.random() * 1000000), // 随机数字，回调时会带回来
 });
 ```
 5. 等待页面跳回到`redirectUri`，此时会附带`code`参数，`state`参数，如果失败会有`ret`参数，例`https://xxx.com?code=123&state=123&ret=0`

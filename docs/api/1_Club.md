@@ -50,13 +50,13 @@ sort: 1
 ## 成功响应
 ```
 {
-	"ret": 0,
+    "ret": 0,
     "msg": "",
-	"data": {
-		"club_id": "1223",
+    "data": {
+        "club_id": "1223",
         "name": "王者俱乐部",
         "avatar": "https://xdfdfd.dd.jpg"
-	}
+    }
 }
 ```
 
