@@ -40,7 +40,7 @@ window.xxxx.authorize({
 
 ### 2 通过code换取网页授权access_token
 
-**Path：** /upbot/api/auth/Token
+**Path：** /upbot/api/auth/GetAccessToken
 
 **Method：** POST
 
