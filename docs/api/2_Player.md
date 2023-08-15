@@ -41,7 +41,7 @@ sort: 2
 | ret | integer | 非必须  |     |    |  |
 | msg | string  | 非必须  |     |    |               |
 | data | Array  | 非必须  |     |   数组 |               |
-| ├─ club_id          | string    | 非必须  |     | 俱乐部ID              |                                              |
+| ├─ club_id          | integer    | 非必须  |     | 俱乐部ID              |                                              |
 | ├─ name          | string    | 非必须  |     | 俱乐部名称              |                                              |
 | ├─ is_creator          | bool    | 非必须  |     | 是否是创建者              |                                              |
 | ├─ role_name          | string    | 非必须  |     | 职位名称              |                                              |
@@ -53,7 +53,7 @@ sort: 2
     "ret": 0,
     "msg": "",
     "data": [{
-        "club_id": "1223",
+        "club_id": 1223,
         "name": "王者俱乐部",
         "is_creator": true,
         "role_name": "创建者",
