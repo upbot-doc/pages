@@ -20,23 +20,34 @@ sort: 3
 
 ### 1 获取code
 
-1. 绑定域名，与心悦沟通，获取app_id及前端域名
+1. 绑定域名，与心悦沟通，获取app_id
 2. 引入js文件
 3. 设置环境（正式or测试）
 ```javascript
-
+<!-- 测试环境 -->
+<script src="https://xinyue.qq.com/dev/XYTeam/auth3rdSdk/feature-auth/index.min.js"></script>
+<!-- 预发布环境环境 -->
+<script src="https://xinyue.qq.com/pre/XYTeam/auth3rdSdk/index.min.js"></script>
+<!-- 正式环境 -->
+<script src="https://xinyue.qq.com/XYTeam/auth3rdSdk/index.min.js"></script>
+<!-- 正式环境 1.0.0 -->
+<script src="https://xinyue.qq.com/XYTeam/auth3rdSdk/1.0.0/index.min.js"></script>
 ```
 4. 获取鉴权code
 ```javascript
-window.xxxx.authorize({
-    appid: '100000', // appid
-    redirectUri: 'https://www.xxxxx.cn', // 回调地址
-    responseCode: 'code', // 固定为code
-    scope: 'openapi_userinfo', // 固定为openapi_userinfo
-    state: Math.floor(Math.random() * 1000000), // 随机数字，回调时会带回来
+const code = window.auth3rdSdk.Auth({
+  appId: '', // 必填
+  redirectUrl: '', // 可选，授权后跳转页面，不传默认为挑战回当前页面
 });
+if (code) {
+    // 当前已授权，获取成功
+} else {
+    // 当前未授权，将自动跳转授权
+}
 ```
+
 5. 等待页面跳回到`redirectUri`，此时会附带`code`参数，`state`参数，如果失败会有`ret`参数，例`https://xxx.com?code=123&state=123&ret=0`
+
 
 ### 2 通过code换取网页授权access_token
 
