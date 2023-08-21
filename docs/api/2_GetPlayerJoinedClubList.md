@@ -72,9 +72,9 @@ sort: 2
 ``` 
 
 
-# 查询普通用户加入的俱乐部信息（包括职位信息）
-
 ## 接口描述
+
+查询普通用户加入的俱乐部信息（包括职位信息）
 
 **Path：** /upbot/api/GetUserJoinedClubList
 
