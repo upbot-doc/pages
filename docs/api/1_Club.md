@@ -42,8 +42,8 @@ sort: 1
 | msg | string  | 非必须  |     |    |               |
 | data | integer  | 非必须  |     |   消息序号 |               |
 | ├─ club_id          | integer    | 非必须  |     | 俱乐部ID              |                                              |
-| ├─ name          | string    | 非必须  |     | 俱乐部名称              |                                              |
-| ├─ avatar          | string    | 非必须  |     | 俱乐部头像              |                                              |
+| ├─ club_name          | string    | 非必须  |     | 俱乐部名称              |                                              |
+| ├─ club_avatar          | string    | 非必须  |     | 俱乐部头像              |                                              |
 
 
 
@@ -54,8 +54,8 @@ sort: 1
     "msg": "",
     "data": {
         "club_id": 1223,
-        "name": "王者俱乐部",
-        "avatar": "https://xdfdfd.dd.jpg"
+        "club_name": "王者俱乐部",
+        "club_avatar": "https://xdfdfd.dd.jpg"
     }
 }
 ```
