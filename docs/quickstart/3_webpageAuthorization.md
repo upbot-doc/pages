@@ -96,7 +96,7 @@ if (code) {
 |-------------------|---------|------|-----|-----------------------------|-------------------------|
 | ret               | integer | 必须   | 0   |                             |                         |
 | msg               | string  | 必须   | ok  |                             |                         |
-| auth_info         | object  |      |     | 授权信息                        |                         |
+| data         | object  |      |     | 授权信息                        |                         |
 | ├─ access_token   | string  |      |     | 网页授权接口调用凭证                  |                         |
 | ├─ expires_in     | number  |      |     | access_token接口调用凭证超时时间，单位（秒 |                         |
 | ├─ refresh_token  | string  |      |     | 用户刷新access_token,有效期30天     |                         |
@@ -122,9 +122,9 @@ if (code) {
 |-------------|---------|------|-----|--------|-----------|
 | ret         | integer | 必须   | 0   |        |           |
 | msg         | string  | 必须   | ok  |        |           |
-| user_info   | object  |      |     | 用户信息   |           |
+| data   | object  |      |     | 用户信息   |           |
 | ├─ openid   | string  |      |     | 用户唯一标识 | uid 字符串类型 |
-| ├─ nickname | string  |      |     | 用户群昵称  |           |
+| ├─ nick_name | string  |      |     | 用户群昵称  |           |
 | ├─ avatar   | string  |      |     | 用户头像   |           |
 
 
@@ -148,7 +148,7 @@ if (code) {
 |-------------------|---------|------|-----|-----------------------------|-------------------------|
 | ret               | integer | 必须   | 0   |                             |                         |
 | msg               | string  | 必须   | ok  |                             |                         |
-| auth_info         | object  |      |     | 授权信息                        |                         |
+| data         | object  |      |     | 授权信息                        |                         |
 | ├─ access_token   | string  |      |     | 网页授权接口调用凭证                  |                         |
 | ├─ expires_in     | number  |      |     | access_token接口调用凭证超时时间，单位（秒 |                         |
 | ├─ refresh_token  | string  |      |     | 用户刷新access_token,有效期30天     |                         |
