@@ -2,7 +2,7 @@
 sort: 3
 ---
 
-# 查询普通用户加入的俱乐部信息（包括职位信息）
+# 查询用户加入的俱乐部信息（包括职位信息）
 
 ## 接口描述
 
@@ -43,7 +43,8 @@ sort: 3
 | data | Array  | 非必须  |     |   数组 |               |
 | ├─ club_info | object  | 非必须  |     |   数组 |               |
 |   ├─ club_id          | integer    | 非必须  |     | 俱乐部ID              |                                              |
-|   ├─ club_name          | string    | 非必须  |     | 俱乐部名称              |                                              |                
+|   ├─ club_name        | string    | 非必须  |     | 俱乐部名称              |                                              |
+|   ├─ club_avatar      | string    | 非必须  |     | 俱乐部头像              |                                              |                
 | ├─ role_name          | string    | 非必须  |     | 职位名称              |                                              |
 
 
