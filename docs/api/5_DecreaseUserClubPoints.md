@@ -1,5 +1,5 @@
 ---
-sort: 3
+sort: 5
 ---
 
 # 减少用户俱乐部个人积分
@@ -35,13 +35,11 @@ sort: 3
 ```
 {
     "bill_no": "dfg34dfgfg4sdgsdfdsfsdf3",
-    "timestamp": 1243455454,
     "charge_list": [{
         "openid": "JHhd993hGG8n0dsfn9hhsdhfi",
         "amount": 100
     }],
-    "desc": "商城积分兑换商品",
-    "source": 14
+    "desc": "商城积分兑换商品"
 }
 ```
 
