@@ -28,7 +28,7 @@ sort: 4
 | charge_list                  | array    | 必须   |     | 需要操作的积分列表                    |                                              |
 | ├─ openid | string  | 必须  |     |   用户openid |               |
 | ├─ amount | integer  | 必须  |     |   积分数量 |               |
-| ├─ expired_time | integer  | 非必须  |     |   过期时间，unix时间戳，默认是一年。 |               |
+| ├─ expired_time | integer  | 非必须  |     |   过期时间(秒)，unix时间戳，默认是一年。 |               |
 | desc                  | string    | 必须   |     | 积分变更说明                    |                                              |
 
 ## 请求示例
