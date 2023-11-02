@@ -85,8 +85,8 @@ if (code) {
 
 | 名称         | 类型     | 是否必须 | 默认值 | 备注                     | 其他信息         |
 |------------|--------|------|-----|------------------------|--------------|
-| appid      | string | 必须   |     | 机器人唯一标识                | bot_id字符串类型 |
-| app_secret | string | 必须   |     | 机器人的secret             | 官方提供         |
+| appid      | string | 必须   |     | 应用唯一凭证                |  |
+| app_secret | string | 必须   |     | 应用唯一凭证密钥             |          |
 | code       | string | 必须   |     | 填写第一步获取的code参数         |    有效期5分钟，只能使用一次          |
 | grant_type | string | 必须   |     | 填写为 authorization_code |              |
 
@@ -138,7 +138,7 @@ if (code) {
 
 | 名称            | 类型     | 是否必须 | 默认值 | 备注                                 | 其他信息        |
 |---------------|--------|------|-----|------------------------------------|-------------|
-| appid         | string | 必须   |     | 机器人唯一标识                            | bot_id 字符串类型 |
+| appid      | string | 必须   |     | 应用唯一凭证                |  |
 | refresh_token | string | 必须   |     | 填写通过AccessToken获取到的refresh_token参数 |             |
 | grant_type    | string | 必须   |     | 填写为 refresh_token                  |             |
 
