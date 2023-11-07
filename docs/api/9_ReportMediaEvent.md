@@ -38,7 +38,7 @@ sort: 9
 | &nbsp;&nbsp;&nbsp;&nbsp; ├─  event_time  |  integer  |  |     | 事件发生时间戳，时间戳   |          |
 | &nbsp;&nbsp;&nbsp;&nbsp; ├─  media_type  |  integer  |  |     | 媒介类型，见media_type取值   |          |
 | &nbsp;&nbsp;&nbsp;&nbsp; ├─  code  |  string  |  |     | 活码   |          |
-| &nbsp;&nbsp;&nbsp;&nbsp; ├─  trace_id  |  string  |  |     |  跟踪标识   |          |
+| &nbsp;&nbsp;&nbsp;&nbsp; ├─  trace_id  |  string  | | | 跟踪标识,同一次操作保持一致    | |
 | &nbsp;&nbsp;&nbsp;&nbsp; ├─  duration  |  integer  |  |     |  停留时长(秒)  |          |
 
 | account_type取值    | 说明    |

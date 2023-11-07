@@ -30,7 +30,7 @@ sort: 8
 | ├─  openid  |   string  | 必须   |     |   openid     |          |
 | media_type                  | integer    | 必须   |    | 媒介类型，见media_type取值      |             |
 | code                  | string    | 必须   |    | 活码         |              |
-| trace_id              |   string  | 必须   |    | 跟踪用唯一标识           |       ||
+| trace_id              |   string  | 必须   |    | 跟踪标识,同一次操作保持一致   |       ||
 
 | account_type取值    | 说明    |
 |----------------------|------------|
