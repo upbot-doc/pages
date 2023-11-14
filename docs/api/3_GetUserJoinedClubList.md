@@ -44,7 +44,9 @@ sort: 3
 | ├─ club_info | object  | 非必须  |     |   数组 |               |
 |   ├─ club_id          | integer    | 非必须  |     | 俱乐部ID              |                                              |
 |   ├─ club_name        | string    | 非必须  |     | 俱乐部名称              |                                              |
-|   ├─ club_avatar      | string    | 非必须  |     | 俱乐部头像              |                                              |                
+|   ├─ club_avatar      | string    | 非必须  |     | 俱乐部头像              |                                              |
+|   ├─ game_id          | integer    | 非必须  |     | 俱乐部游戏id              |                                              |
+|   ├─ game_code        | string    | 非必须  |     | 俱乐部游戏code              |                                              |                
 | ├─ role_name          | string    | 非必须  |     | 职位名称              |                                              |
 
 
