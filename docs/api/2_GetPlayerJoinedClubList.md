@@ -45,7 +45,7 @@ sort: 2
 |   ├─ club_id          | integer    | 非必须  |     | 俱乐部ID              |                                              |
 |   ├─ club_name          | string    | 非必须  |     | 俱乐部名称              |                                              |
 |   ├─ club_avatar      | string    | 非必须  |     | 俱乐部头像              |                                              |
-|   ├─ game_id          | integer    | 非必须  |     | 俱乐部游戏id              |                                              |
+|   ├─ gid          | integer    | 非必须  |     | 俱乐部游戏id              |                                              |
 |   ├─ game_code        | string    | 非必须  |     | 俱乐部游戏code              |                                              |                
 | ├─ role_name          | string    | 非必须  |     | 职位名称              |                                              |
 
@@ -59,7 +59,9 @@ sort: 2
         "club_info":{
             "club_id":258,
             "club_name":"苏苏宝贝",
-            "club_avatar":"https://333454xxx.jpg"
+            "club_avatar":"https://333454xxx.jpg",
+            "gid": 123,
+            "game_code": "xddd"
         },
         "role_name":"创建者"
     }]
