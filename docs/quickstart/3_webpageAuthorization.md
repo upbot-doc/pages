@@ -23,7 +23,7 @@ sort: 3
 1. 绑定域名，与心悦沟通，获取app_id
 2. 引入js文件
 3. 设置环境（正式or测试）
-```javascript
+```html
 <!-- 测试环境 -->
 <script src="https://xinyue.qq.com/dev/XYTeam/auth3rdSdk/index.min.js"></script>
 <!-- 预发布环境环境 -->
@@ -35,7 +35,7 @@ sort: 3
 ```
 4. 获取鉴权code
 ```javascript
-const { ret, state, code} = window.auth3rdSdk.Auth({
+const { ret, state, code, isNewUser, mcnUid } = window.auth3rdSdk.Auth({
   appId: '', // 必填
   redirectUrl: '', // 可选，授权后跳转页面，不传默认为回当前页面
 });
@@ -49,24 +49,60 @@ if (code) {
 5. 等待页面跳回到`redirectUri`，此时会附带`code`参数，`state`参数，如果失败会有`ret`参数，例`https://xxx.com?code=123&state=123&ret=0`
 
 #### 说明
-##### Auth
+##### （1）授权/登录
 ##### 方法名：Auth
 ##### 入参：object
-```javascript
+```ts
 {
-  appId: string, // 必填
+  appId: string, // 必填，后台校验用
+  useLogin: boolean, // 可选，用于判断当前是使用授权功能还是使用心悦登录，默认false
+  // 授权：当前游戏家已登录，但未绑定心悦账号
+  // 登录：当前游戏家未登录，选择心悦渠道登录
   redirectUrl: string, // 可选，授权后跳转页面，不传默认为回当前页面
+  autoLoginNewUser: boolean, // 新用户是否自动跳转登录，默认true
 }
 ```
 ##### 返回：object
-```javascript
+```ts
 {
   ret: number, // 状态码 0 正常 -1 异常
   state: string, // 随机数，相当于CSRF token 状态码为0时返回
   code: string, // 授权码 状态码为0时返回
+  isNewUser: boolean, // 是否是新用户，useLogin为true时返回
+  mcnUid: string, // 游戏家联盟用户id，useLogin为true时返回
+}
+```
+##### 调用示例
+```javascript
+const { ret, state, code, isNewUser, mcnUid } = window.auth3rdSdk.Auth({
+  appId: '', // 必填
+  redirectUrl: '', // 可选，授权后跳转页面，不传默认为回当前页面
+});
+if (code) {
+    // 当前已授权，获取成功
+} else {
+    // 当前未授权，将自动跳转授权
 }
 ```
 说明：请求参数为object，已授权返回code，未授权返回空字符串，并拉起心悦授权
+
+##### （2）获取当前平台
+##### 常量：PLATFROM
+```ts
+{
+  QQ: string, // qq
+  WECHAT: string, // 微信
+  BROWSER: string, // 浏览器
+  TGCLUB: string, // 心悦APP
+};
+```
+##### 调用示例
+```js
+const { PLATFROM, platform } = window.auth3rdSdk;
+if (platform === PLATFROM.TGCLUB) {
+  // 心悦内
+}
+```
 
 
 ### 2 通过code换取网页授权access_token
@@ -154,3 +190,32 @@ if (code) {
 | ├─ refresh_token  | string  |      |     | 用户刷新access_token,有效期30天     |                         |
 | ├─ openid         | string  |      |     | 用户唯一标识                      | uid 字符串类型               |
 | ├─ scope          | string  |      |     | 作用域                         | 目前会固定返回openapi_userinfo |
+
+## 小程序授权流程
+
+跳转方法见小程序开发文档：https://developers.weixin.qq.com/miniprogram/dev/api/navigate/wx.navigateToMiniProgram.html
+
+参数均放在 extraData，通过onShow获取。
+
+> 心悦小程序APPID和授权页路径申请授权时由开发提供
+
+### 第三方小程序提供参数
+
+```ts
+{
+  appId: string, // 必填，后台校验用，与h5一致
+  useLogin: boolean, // 可选，用于判断当前是使用授权功能还是使用心悦登录，默认false
+}
+```
+
+### 授权小程序返回参数
+
+```ts
+{
+  ret: number, // 状态码 0 正常 -1 异常
+  state: string, // 随机数，相当于CSRF token 状态码为0时返回
+  code: string, // 授权码 状态码为0时返回
+  isNewUser: boolean, // 是否是新用户，useLogin为true时返回
+  mcnUid: string, // 游戏家联盟用户id，useLogin为true时返回
+}
+```
