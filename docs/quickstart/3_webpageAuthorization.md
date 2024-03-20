@@ -35,7 +35,7 @@ sort: 3
 ```
 4. 获取鉴权code
 ```javascript
-const { ret, state, code, isNewUser, mcnUid } = window.auth3rdSdk.Auth({
+const { ret, state, code, isNewUser, mcnUid } = await window.auth3rdSdk.Auth({
   appId: '', // 必填
   redirectUrl: '', // 可选，授权后跳转页面，不传默认为回当前页面
 });
@@ -46,10 +46,10 @@ if (code) {
 }
 ```
 
-5. 等待页面跳回到`redirectUri`，此时会附带`code`参数，`state`参数，如果失败会有`ret`参数，例`https://xxx.com?code=123&state=123&ret=0`
+注：Auth方法闭环获取鉴权过程，调用该方法获取参数即可，获取失败时会根据传入参数决定是否拉起登录/授权
 
 #### 说明
-##### （1）授权/登录
+##### （1）授权/登录（异步方法）
 ##### 方法名：Auth
 ##### 入参：object
 ```ts
