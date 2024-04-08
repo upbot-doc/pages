@@ -26,7 +26,7 @@ sort: 11
 |----------------------|------------|------|-----|---------------------------|----------------------------------------------|
 | head                  | object    | 必须   |     | 公共信息      |                  |
 | ├─  uid |  string   | 必须   |     | 用户ID      |
-| ├─  xy_openid |  string   | 必须   |     | 心悦openid
+| ├─  openid |  string   | 必须   |     | 心悦openid
 | ├─  device_type  |  integer   |  |     | 设备类型:1安卓, 2IOS    |          |
 | ├─  business_type  |  integer   |  |     | 业务类型：1游戏家联盟    |          |
 | items             |   object  | 必须   |    | 数据内容           |       |
@@ -51,7 +51,7 @@ sort: 11
 {
     "head": {
         "uid": 890347598,
-        "xy_openid": "HH88bB83BB",
+        "openid": "HH88bB83BB",
         "device_type": 1,
         "business_type": 1
     },
