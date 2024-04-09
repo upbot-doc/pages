@@ -9,7 +9,7 @@ sort: 1
 平台所有接口地址使用以下域名
 
 ### 测试环境
-https://bgw-t.xinyue.qq.com
+https://xxxx.com
 
 ### 生产环境
-https://bgw.xinyue.qq.com
+https://xxxx.com
