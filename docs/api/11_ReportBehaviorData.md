@@ -30,7 +30,7 @@ sort: 11
 | ├─  device_type  |  integer   |  |     | 设备类型:1安卓, 2IOS    |          |
 | ├─  business_type  |  integer   |  |     | 业务类型：1游戏家联盟    |          |
 | items             |   object  | 必须   |    | 数据内容           |       |
-| ├─  event_time  |  integer  |  |     | 事件发生时间戳，时间戳   |          |
+| ├─  event_time  |  integer  |  |     | 事件发生时间戳，时间戳(秒)   |          |
 | ├─  channel  |  integer  |  |     | 渠道：1 H5 2小程序   |          |
 | ├─  operate_id  |  integer  |  |     | 操作类型   |          |
 | ├─  page_id  |  integer  |  |     | 页面ID   |          |
