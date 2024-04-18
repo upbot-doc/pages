@@ -26,9 +26,9 @@ sort: 12
 |------------------------|---------------|----------|-------|------------------------------------------------|---------------------------------------------------------|
 | openid                 |     string    |   必须   |       | 心悦openid                                      |                                                         |
 | game_code              |     string    |   必须   |       | 游戏标识                                        |                                                         |
-| area_id                |     integer   |   必须   |       | 手Q/微信, STD_CHANNEL_DATA                      |                                                         |
-| plat_id                |     integer   |   必须   |       | iOS/Android, STD_SYSTEM_DATA                    |                                                         |
-| partition_id           |     integer   |    否    |   0   | 区服id                                          |                                                         |
+| area_id                |     string    |   必须   |       | 手Q/微信, STD_CHANNEL_DATA                      |                                                         |
+| plat_id                |     string    |   必须   |       | iOS/Android, STD_SYSTEM_DATA                    |                                                         |
+| partition_id           |     string    |    否    |   0   | 区服id                                          |                                                         |
 | role_name              |     string    |    否    | 空串  | 角色名称                                         |                                                         |
 | game_check_info_id     |     integer   |   必须   |       | 传入想要判断的数据类型id, 比如cfm的第三人称单排段位 |                                                         |
 | xinyue_codes           | string array  |    否    |       | 管理端上传的判断相等的心悦代号, 比如段位           |                                                         |
@@ -42,12 +42,12 @@ sort: 12
 {
     "openid": "aaa",
     "game_code": "cfm",
-    "area_id": 1,
-    "plat_id": 2,
-    "partition_id": 0,
+    "area_id": "1",
+    "plat_id": "2",
+    "partition_id": "0",
     "role_name": "bbb",
     "game_check_info_id": 1,
-    "xinyue_codes": [1]
+    "xinyue_codes": ["1"]
 }
 ```
 
