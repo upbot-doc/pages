@@ -1,5 +1,5 @@
 ---
-sort: 15
+sort: 16
 ---
 
 # 获取积分结算信息
@@ -97,7 +97,7 @@ sort: 15
                 "gid": 1279
             },
             "detail": "活动",
-            "source": 
+            "source": 14,
             "jf_source": 1279
         }],
         "page_context": "122",
