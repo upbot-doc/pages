@@ -33,9 +33,9 @@ sort: 12
 | game_check_info_id     |     integer   |   必须   |       | 传入想要判断的数据类型id, 比如cfm的第三人称单排段位 |                                                         |
 | xinyue_codes           | string array  |    否    |       | 管理端上传的判断相等的心悦代号, 比如段位           |                                                         |
 | compare_info           |     object    |    否    |       | 管理端上传的判断大小的心悦代号, 比如声望值         |                                                         |
-| ├─  compare_type       |     integer   |    否    |       | 比较类型, 1相等,2小于,3小于等于,4大于,5大于等于    |                                                         |
+| ├─  compare_type       |     integer   |    否    |       | 比较类型, 1相等,2小于,3小于等于,4大于,5大于等于,6区间（左右闭区间）    |                                                         |
 | ├─  value              |     integer   |    否    |       | 比较的基准值                                     |                                                         |
-
+| ├─  rvalue              |     integer   |    否    |       | 当compare_type为6时，value表示左区间值，rvalue表示右区间值                                     |            
 
 ## 请求示例
 ```
