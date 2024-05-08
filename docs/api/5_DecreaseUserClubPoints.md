@@ -29,6 +29,7 @@ sort: 5
 | ├─ openid | string  | 必须  |     |   用户openid |               |
 | ├─ amount | integer  | 必须  |     |   积分数量 |               |
 | desc                  | string    | 必须   |     | 积分变更说明                    |                                              |
+| gid                  | integer    | 否   |     | 游戏id                    |                                              |
 
 ## 请求示例
 
@@ -39,7 +40,8 @@ sort: 5
         "openid": "JHhd993hGG8n0dsfn9hhsdhfi",
         "amount": 100
     }],
-    "desc": "商城积分兑换商品"
+    "desc": "商城积分兑换商品",
+    "gid": 1279
 }
 ```
 

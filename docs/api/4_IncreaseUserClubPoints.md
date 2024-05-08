@@ -30,6 +30,7 @@ sort: 4
 | ├─ amount | integer  | 必须  |     |   积分数量 |               |
 | ├─ expired_time | integer  | 非必须  |     |   过期时间(秒)，unix时间戳，默认是一年。 |               |
 | desc                  | string    | 必须   |     | 积分变更说明                    |                                              |
+| gid                  | integer    | 否   |     | 游戏id                    |                                              |
 
 ## 请求示例
 ```
@@ -40,7 +41,8 @@ sort: 4
         "amount": 100,
         "expired_time": 123434545455
     }],
-    "desc": "完成任务奖励积分"
+    "desc": "完成任务奖励积分",
+    "gid": 1279
 }
 ```
 
