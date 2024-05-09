@@ -6,7 +6,7 @@ sort: 16
 
 ## 接口描述
 
-**Path：** /upbot/api/GetClubJfSettleInfo
+**Path：** /upbot/api/GetClubJfSettleList
 
 **Method：** POST
 
