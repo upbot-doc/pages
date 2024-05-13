@@ -27,14 +27,14 @@ sort: 19
 | bill_no                  | string    | 必须   |     | 交易订单id。必填，最长64字节                    |                                              |
 | openid              |     string    |   必须   |       | 心悦开平openid                                        |                                                         |
 | amt_ratio              |     integer    |   必须   |       | 结算金额百分比。在结算金额小于订单金额的情况下需要传入。范围[0,100]，不填（或者填0）按100%算                                        |                                                         |
-
+| settle_amt              |     integer    |   必须   |       | 结算金额。非 0 时需要小于原订单金额。填写结算金额后，结算百分比默认为 100%                                        |                                                         |
 
 ## 请求示例
 ```
 {
     "bill_no": "sdfsdfsdcsdc",
     "openid": "xxxxd3dd",
-    "amt_ratio": 30
+    "settle_amt": 5000
 }
 ```
 
