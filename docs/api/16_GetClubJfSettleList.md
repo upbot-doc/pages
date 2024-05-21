@@ -105,7 +105,8 @@ sort: 16
             "jf_source": 1279
         }],
         "page_context": "122",
-        "is_end": false
+        "is_end": false,
+        "total_amt": 88888.33
     }
 }
 ```
