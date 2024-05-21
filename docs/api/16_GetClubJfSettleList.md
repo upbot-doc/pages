@@ -57,7 +57,7 @@ sort: 16
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ├─  gid  |   integer  | 否   |     |   游戏ID     |          |
 | &nbsp;&nbsp;&nbsp;&nbsp; ├─  detail  |   string  | 必须   |     |   订单详情     |          |
 | &nbsp;&nbsp;&nbsp;&nbsp; ├─  source  |   integer  | 必须   |     |   积分来源     |          |
-| &nbsp;&nbsp;&nbsp;&nbsp; ├─  jf_source  |   integer  | 必须   |     |   积分所属游戏     |          |
+| &nbsp;&nbsp;&nbsp;&nbsp; ├─  jf_gid  |   integer  | 必须   |     |   积分所属游戏     |          |
 | ├─  total_amt                  |  double         |   必须   |        |  总计金额。查询条件内的总计结算金额，仅展示用，保留两位小数。只在第一次查询时返回（req 的 page_context 为空时）                          |               |
 | ├─  page_context                  |  string         |   必须   |        |  分页信息，透传获取下一页                          |               |
 | ├─  is_end                        |  bool         |   必须   |        |  是否没有数据了                          |               |
@@ -102,7 +102,7 @@ sort: 16
             },
             "detail": "活动",
             "source": 14,
-            "jf_source": 1279
+            "jf_gid": 1279
         }],
         "page_context": "122",
         "is_end": false,
