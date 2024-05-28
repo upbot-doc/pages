@@ -42,14 +42,14 @@ sort: 3
 | msg | string  | 非必须  |     |    |               |
 | data | Array  | 非必须  |     |   数组 |               |
 | ├─ club_info | object  | 非必须  |     |   数组 |               |
-|   ├─ club_id          | integer    | 非必须  |     | 俱乐部ID              |                                              |
-|   ├─ club_name        | string    | 非必须  |     | 俱乐部名称              |                                              |
-|   ├─ club_avatar      | string    | 非必须  |     | 俱乐部头像              |                                              |
-|   ├─ gid          | integer    | 非必须  |     | 俱乐部游戏id              |                                              |
-|   ├─ game_code        | string    | 非必须  |     | 俱乐部游戏code              |                                              |
-|   ├─ club_level        | integer    | 非必须  |     | 俱乐部等级              |                                              |                
+| &nbsp;&nbsp;&nbsp;&nbsp; ├─ club_id          | integer    | 非必须  |     | 俱乐部ID              |                                              |
+| &nbsp;&nbsp;&nbsp;&nbsp; ├─ club_name        | string    | 非必须  |     | 俱乐部名称              |                                              |
+| &nbsp;&nbsp;&nbsp;&nbsp; ├─ club_avatar      | string    | 非必须  |     | 俱乐部头像              |                                              |
+| &nbsp;&nbsp;&nbsp;&nbsp; ├─ gid          | integer    | 非必须  |     | 俱乐部游戏id              |                                              |
+| &nbsp;&nbsp;&nbsp;&nbsp; ├─ game_code        | string    | 非必须  |     | 俱乐部游戏code              |                                              |
+| &nbsp;&nbsp;&nbsp;&nbsp; ├─ club_level        | integer    | 非必须  |     | 俱乐部等级              |                                              |                
 | ├─ role_name          | string    | 非必须  |     | 职位名称              |                                              |
-
+| ├─ join_time          | integer    | 非必须  |     | 最近一次加入时间              |                                              |
 
 ## 成功响应
 ```
@@ -65,7 +65,8 @@ sort: 3
             "game_code": "xddd",
             "club_level": 10
         },
-        "role_name":"创建者"
+        "role_name": "创建者",
+        "join_time": 123343434
     }]
 }
 ```
