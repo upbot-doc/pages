@@ -47,7 +47,9 @@ sort: 3
 | &nbsp;&nbsp;&nbsp;&nbsp; ├─ club_avatar      | string    | 非必须  |     | 俱乐部头像              |                                              |
 | &nbsp;&nbsp;&nbsp;&nbsp; ├─ gid          | integer    | 非必须  |     | 俱乐部游戏id              |                                              |
 | &nbsp;&nbsp;&nbsp;&nbsp; ├─ game_code        | string    | 非必须  |     | 俱乐部游戏code              |                                              |
-| &nbsp;&nbsp;&nbsp;&nbsp; ├─ club_level        | integer    | 非必须  |     | 俱乐部等级              |                                              |                
+| &nbsp;&nbsp;&nbsp;&nbsp; ├─ club_level_v2        | object    | 非必须  |     | 俱乐部等级信息              |                                              |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ├─ club_level_point        | object    | 非必须  |     | 俱乐部等级信息              |                                              |                
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ├─ level        | integer    | 非必须  |     | 俱乐部等级              |                                              |                
 | ├─ role_name          | string    | 非必须  |     | 职位名称              |                                              |
 | ├─ join_time          | integer    | 非必须  |     | 最近一次加入时间              |                                              |
 
@@ -63,7 +65,11 @@ sort: 3
             "club_avatar":"https://333454xxx.jpg",
             "gid": 123,
             "game_code": "xddd",
-            "club_level": 10
+            "club_level_v2": {
+                "club_level_point": {
+                    "level": 10
+                }
+            }
         },
         "role_name": "创建者",
         "join_time": 123343434
