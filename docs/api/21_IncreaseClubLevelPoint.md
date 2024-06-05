@@ -31,6 +31,11 @@ sort: 21
 | scene                  | string    | 必须   |     |  发放场景值，场景值将用于筛选查询发放历史                    |                                              |
 | amount                  | integer    | 必须   |     |  发放份数                    |                                              |
 | notes                  | string    | 否   |     |  备注信息，一般为发放页面的title信息                    |                                              |
+| flow_time                  | int64    | 必须   |   获取时间戳 秒, 必填  |                      |                                              |
+| flow_desc                  | string    | 必须   |   数值变化文案, 必填  |                      |                                              |
+| gid                  | string    | 否   |     |  关联游戏ID                    |                                              |
+| act_id                  | string    | 否   |     |  关联活动ID                   |                                              |
+| remark                  | string    | 否   |     |  备注，仅供内部查看                    |                                              |
 
 
 ## 请求示例
@@ -42,7 +47,9 @@ sort: 21
     "rid": "A2020011300000111",
     "scene": "gamer-league",
     "amount": 10,
-    "notes": ""
+    "notes": "",
+    "flow_time": 174958945,
+    "flow_desc": "加加加"
 }
 ```
 
