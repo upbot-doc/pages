@@ -1,4 +1,4 @@
-remote_theme: rundocs/jekyll-rtd-theme
+remote_theme: daviddarnes/alembic@main
 
 title: upbot开发者中心
 lang: en
