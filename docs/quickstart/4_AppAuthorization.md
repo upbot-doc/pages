@@ -18,24 +18,26 @@ sort: 4
 
 ### 注册Activity
 在AndroidMeanifest.xml中注册授权响应Activity
-        <activity
-            android:name="com.tencent.tgclubsdk.TgAuthActivity"
-            android:exported="true"
-            android:launchMode="singleTask"
-            android:noHistory="true">
-            <intent-filter>
-                <action android:name="android.intent.action.VIEW" />
+```
+    <activity
+        android:name="com.tencent.tgclubsdk.TgAuthActivity"
+        android:exported="true"
+        android:launchMode="singleTask"
+        android:noHistory="true">
+        <intent-filter>
+            <action android:name="android.intent.action.VIEW" />
 
-                <category android:name="android.intent.category.DEFAULT" />
-                <category android:name="android.intent.category.BROWSABLE" />
+            <category android:name="android.intent.category.DEFAULT" />
+            <category android:name="android.intent.category.BROWSABLE" />
 
-                <data android:scheme="${注册应用时提供的secheme}" />
-            </intent-filter>
-        </activity>
-
+            <data android:scheme="${注册应用时提供的secheme}" />
+        </intent-filter>
+    </activity>
+```
 
 ### 初始化SDK
 在Application的onCreate生命周期初始化SDK
+```
 class MyApp : Application() {
     override fun onCreate() {
         super.onCreate()
@@ -57,15 +59,16 @@ class MyApp : Application() {
 
     }
 }
-
+```
 
 ### 请求授权
 在需要授权的时候，发送授权请求
+```
 val tgApi = TgApiFactory.createTgAPI(this, appId)
 val req = TgReq()
 req.scheme = "${注册应用时提供的secheme}"
 tgApi?.sendReq(req)
-
+```
 
 ## 错误码
 SDK相关错误码看查看TgCode类
